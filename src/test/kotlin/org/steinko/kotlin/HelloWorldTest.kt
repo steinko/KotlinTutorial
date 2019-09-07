@@ -1,19 +1,27 @@
 package org.steinko.kotlin
 
 import org.steinko.kotlin.App
-import org.jetbrains.spek.api.Spek
-import org.jetbrains.spek.api.dsl.describe
-import org.jetbrains.spek.api.dsl.given
-import org.jetbrains.spek.api.dsl.it
-import org.jetbrains.spek.api.dsl.on
+
+import org.spekframework.spek2.Spek
+import org.spekframework.spek2.style.gherkin.Feature
+
 import org.junit.jupiter.api.Assertions.assertEquals
 
 class HelloWorlTest: Spek({
-     given(" Display Hello Worl") {
-           val classUnderTest = App()
-           on("should display hello worl"){
-              val result = classUnderTest.greeting
-              it("Produces Hello World") {
+
+   Feature("Hello World Tests ") {
+       
+       Scenario( "Should display hello world") {
+          
+          var  classUnderTest: App =  App()
+          
+           
+           var result: String = ""
+           When("displays hello world") {
+                result = classUnderTest.greeting
+           }  
+            
+           Then ("Produces Hello World") {
                   assertEquals(result, "Hello world.")
            }
         }
