@@ -5,6 +5,8 @@ plugins {
     // Apply the application plugin to add support for building a CLI application.
     application
     java
+    
+    id("org.jmailen.kotlinter") version "2.1.1"
 }
 
 repositories {

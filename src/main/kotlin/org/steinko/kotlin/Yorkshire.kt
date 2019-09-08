@@ -1,7 +1,7 @@
 package org.steinko.kotlin
-class Yorkshire : Dog() { 
+class Yorkshire : Dog() {
 
-    override fun sayHello(): String {   
+    override fun sayHello(): String {
         return "wif wif!"
     }
 }
