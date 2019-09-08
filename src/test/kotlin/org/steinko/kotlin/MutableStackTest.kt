@@ -43,8 +43,26 @@ class MutableStackTest: Spek({
                assertEquals(classUnderTest.size(),1)
            }
            
+           Then("should contain the pushed element") {
            
+                assertEquals(classUnderTest.peek(),1)
+            }
+              
+      }
+      
+      Scenario("Should add another elemenet") { 
+         
+          When ("Add Item") {  
+          
+             classUnderTest.push(2)
+          }
+          
            
+           Then("should contain the pushed element") {
+           
+                assertEquals(classUnderTest.peek(),2)
+            }
+              
       }
     }
 })

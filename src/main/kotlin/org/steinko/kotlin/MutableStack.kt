@@ -6,6 +6,7 @@ class MutableStack<E> (vararg items: E) {
    fun push(element:E) = elements.add(element)
    fun isEmpty() = elements.isEmpty()
    fun size()  = elements.size
+   fun peek() :E  = elements.last()
 
 
 }
